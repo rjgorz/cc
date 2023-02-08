@@ -7,6 +7,8 @@ function Planeteer({ id, name, fromUSA, born, bio, quote, pictureUrl, twitter })
     setIsClicked(isClicked => !isClicked);
   }
 
+  const year = new Date().getFullYear();
+
   return (
     <li className="cards__item">
       <div className="card">
@@ -21,9 +23,8 @@ function Planeteer({ id, name, fromUSA, born, bio, quote, pictureUrl, twitter })
           <p className="card__text">{isClicked ? quote : bio}</p>
           <div className="card__detail">
             <p>{twitter}</p>
-            <p>
-              {fromUSA ? "USA-based" : "Working overseas"}
-            </p>
+            <p>Age: {year - born}</p>
+            <p>{fromUSA ? "USA-based" : "Working overseas"}</p>
           </div>
         </div>
       </div>

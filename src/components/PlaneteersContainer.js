@@ -2,6 +2,7 @@ import React from "react";
 import Planeteer from "./Planeteer";
 
 function PlaneteersContainer({ planeteers }) {
+  //map over array of planeteers, creating components to render cards
   const planeteerCards = planeteers.map(planeteer => {
     return (
       <Planeteer
@@ -20,7 +21,7 @@ function PlaneteersContainer({ planeteers }) {
 
   return (
     <ul className="cards">
-      {planeteerCards}
+      {planeteerCards}      {/*display all planeteer cards created from map above*/}
     </ul>
   );
 }

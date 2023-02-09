@@ -52,8 +52,8 @@ function App() {
   return (
     <div>
       <Header />
-      <SearchBar handleSearch={handleSearch} handleCheck={handleCheck} isChecked={isChecked} />
-      <RandomButton />
+      <SearchBar handleSearch={handleSearch} handleCheck={handleCheck} isChecked={isChecked} search={search} />
+      <RandomButton setPlaneteers={setPlaneteers} planeteers={planeteers} />
       <PlaneteersContainer planeteers={planeteersToRender} />
     </div>
   );
